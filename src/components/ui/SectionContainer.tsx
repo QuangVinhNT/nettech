@@ -5,20 +5,21 @@ type Props = {
   title: string;
   description?: string;
   child: ReactNode;
+  align?: 'center' | 'left';
   className?: string;
 };
 const SectionContainer = (props: Props) => {
-  const { label, title, description, className, child } = props;
+  const { label, title, description, className, child, align } = props;
   return (
     <div className={`${className}`}>
       {label && (
-        <div className="border border-primary w-fit mx-auto rounded-full px-8 mb-8">
-          <span className="text-sm relative before:content-[''] before:w-2 before:h-2 before:bg-primary before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:rounded-full">{label}</span>
+        <div className="border border-primary w-fit mx-auto rounded-full px-8 mb-8 shadow-lg shadow-primary/20">
+          <span className="text-sm relative before:content-[''] before:size-2 before:bg-primary before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:rounded-full">{label}</span>
         </div>
       )}
-      <h1 className="text-4xl font-bold text-center">{title}</h1>
+      <h1 className={`text-4xl font-bold ${(align && align === 'left') ? 'text-left' : 'text-center'}`}>{title}</h1>
       {description && (
-        <p>{description}</p>
+        <p className={`${(align && align === 'left') ? 'text-left' : 'text-center leading-10'} mt-8 text-xl shadow-lg`}>{description}</p>
       )}
       {child}
     </div>
