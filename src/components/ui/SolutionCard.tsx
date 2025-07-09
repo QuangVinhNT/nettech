@@ -6,7 +6,7 @@ type Props = {
 const SolutionCard = (props: Props) => {
   const { icon, title, description } = props;
   return (
-    <div className="bg-white/24 w-[333px] h-[383px] rounded-2xl p-8">
+    <div className="bg-white/24 w-[333px] h-[383px] rounded-2xl p-8 shadow-[0_0_30px_rgba(83,128,234,0.2)]">
       <img src={icon} alt="icon" className="block mx-auto size-12 object-contain"/>
       <h2 className="text-xl font-semibold my-2 text-center">{title}</h2>
       <p className="">{description}</p>

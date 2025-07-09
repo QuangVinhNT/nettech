@@ -15,7 +15,7 @@ const Button = (props: Props) => {
           <button className={'text-white text-xl bg-secondary px-4 py-2 rounded-full flex items-center gap-2 cursor-pointer'}>{label}{suffix && suffix}</button>
         </div>
       ) : (
-        <button className={`text-white text-xl bg-linear-to-r from-[#9AFFFF] via-[#299FE5] to-[#478EEE] px-8 py-4 rounded-full flex items-center gap-2 cursor-pointer shadow-lg shadow-primary/40 ${className}`}>{label}{suffix && suffix}</button>
+        <button className={`text-white text-xl bg-linear-to-r from-[#9AFFFF] via-[#299FE5] to-[#478EEE] px-8 py-4 rounded-full flex items-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(154,255,255,0.5)] ${className}`}>{label}{suffix && suffix}</button>
       )}
     </>
   )

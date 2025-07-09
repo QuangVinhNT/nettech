@@ -45,8 +45,8 @@ const SolutionsSection = () => {
                 <Button
                   label="Contact us"
                   variant="primary"
-                  className="mx-auto mt-6"
-                  suffix={<ArrowRightIcon className="size-4 stroke-[2.5]" />}
+                  className="group mx-auto mt-6"
+                  suffix={<ArrowRightIcon className="size-4 stroke-[2.5] transition-all group-hover:translate-x-1" />}
                 />
                 <div className="flex flex-wrap justify-center gap-6 mt-8">
                   {solutions.map((solution, idx) => (

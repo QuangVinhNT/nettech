@@ -5,9 +5,10 @@ import ReasonSection from "./layout/ReasonSection";
 import SolutionsSection from "./layout/SolutionsSection";
 import Button from "./ui/Button";
 import Container from "./ui/Container";
+import ReasonCard from "./ui/ReasonCard";
 import SectionContainer from "./ui/SectionContainer";
 
 export {
   Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection,
-  Container, Button, SectionContainer
+  Container, Button, SectionContainer, ReasonCard
 };
