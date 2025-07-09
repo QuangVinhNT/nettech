@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00BBE4;
+  --color-secondary: #7300FF;
+  --color-background: #021530;
+  --color-gray: #B6C4CA;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
