@@ -39,7 +39,7 @@ const AwardSection = () => {
             </ul>
             <div className="flex  bg-white/30 mt-8 rounded-2xl h-[300px] backdrop-blur-xl">
               {tabs.filter((tab) => tab.label === selectedTab)[0].values.map((tabValue, idx) => (
-                <div key={idx} className="py-12 rounded-2xl cursor-pointer hover:bg-gradient-to-tr from-[#299FE5] via-[#9AFFFF] to-[#00BBE4]">
+                <div key={idx} className="py-12 rounded-2xl cursor-pointer hover:bg-gradient-to-tr from-[#299FE5] via-[#9AFFFF] to-[#00BBE4] transition-all">
                   <img src={tabValue} alt="" className="w-full h-full object-contain scale-120"/>
                 </div>
               ))}
