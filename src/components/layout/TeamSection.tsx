@@ -25,7 +25,7 @@ const members = [
 ];
 const TeamSection = () => {
   return (
-    <div className="bg-background relative z-0 before:absolute before:top-20 before:-left-16 before:content-[''] before:size-[500px] before:rounded-full before:bg-radial before:from-[#FFA700]/40 before:to-[rgba(0,0,0,0)] before:blur-2xl after:absolute after:-bottom-20 after:right-0 after:content-[''] after:size-[600px] after:rounded-full after:bg-radial after:from-[#2478FE]/40 after:to-[rgba(0,0,0,0)] after:blur-2xl overflow-hidden">
+    <div className="relative z-0 before:absolute before:top-20 before:-left-16 before:content-[''] before:size-[500px] before:rounded-full before:bg-radial before:from-[#FFA700]/40 before:to-[rgba(0,0,0,0)] before:blur-2xl after:absolute after:-bottom-20 after:right-0 after:content-[''] after:size-[600px] after:rounded-full after:bg-radial after:from-[#2478FE]/40 after:to-[rgba(0,0,0,0)] after:blur-2xl overflow-hidden">
       <img src={TeamSd2} alt="" className="absolute z-10"/>
       <Container
         child={

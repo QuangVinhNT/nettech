@@ -14,7 +14,7 @@ const clients = [Aia, Bosch, Cjimc, Honda, Ibm, Line];
 
 const OurClientsSection = () => {
   return (
-    <div className="bg-background relative z-0">
+    <div className="relative z-0">
       <img src={OurClientsSD1} alt="" className="absolute z-10 h-full"/>
       <img src={OurClientsSD2} alt="" className="absolute z-10"/>
       <img src={OurClientsSD3} alt="" className="absolute z-10 right-0 h-full"/>

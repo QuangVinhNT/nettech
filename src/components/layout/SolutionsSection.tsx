@@ -33,7 +33,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <div className="bg-background relative z-0 before:absolute before:top-36 before:-left-4 before:content-[''] before:size-[500px] before:rounded-full before:bg-radial before:from-[#FFA700]/40 before:to-[rgba(0,0,0,0)] before:blur-2xl after:absolute after:bottom-40 after:right-20 after:content-[''] after:size-[600px] after:rounded-full after:bg-radial after:from-[#2478FE]/40 after:to-[rgba(0,0,0,0)] after:blur-2xl">
+    <div className="relative z-0 before:absolute before:top-36 before:-left-4 before:content-[''] before:size-[500px] before:rounded-full before:bg-radial before:from-[#FFA700]/40 before:to-[rgba(0,0,0,0)] before:blur-2xl after:absolute after:bottom-40 after:right-20 after:content-[''] after:size-[600px] after:rounded-full after:bg-radial after:from-[#2478FE]/40 after:to-[rgba(0,0,0,0)] after:blur-2xl">
       <Container
         child={
           <SectionContainer
