@@ -1,3 +1,4 @@
+import AwardSection from "./layout/AwardSection";
 import CaseStudiesSection from "./layout/CaseStudiesSection";
 import Header from "./layout/Header";
 import HomeSection from "./layout/HomeSection";
@@ -13,6 +14,6 @@ import SectionContainer from "./ui/SectionContainer";
 import TeamCard from "./ui/TeamCard";
 
 export {
-  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection, TeamSection, CaseStudiesSection,
+  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection, TeamSection, CaseStudiesSection, AwardSection,
   Container, Button, SectionContainer, ReasonCard, TeamCard, CaseStudyCard
 };

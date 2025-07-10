@@ -1,5 +1,5 @@
 import './App.css';
-import { CaseStudiesSection, Header, HomeSection, OurClientsSection, ReasonSection, SolutionsSection, TeamSection } from "./components";
+import { AwardSection, CaseStudiesSection, Header, HomeSection, OurClientsSection, ReasonSection, SolutionsSection, TeamSection } from "./components";
 import HomeSecondaryDetail1 from './assets/background_img/home_sd1.png'
 import HomeSecondaryDetail2 from './assets/background_img/home_sd2.png'
 
@@ -19,6 +19,7 @@ function App() {
       <TeamSection />
 
       <CaseStudiesSection />
+      <AwardSection />
     </div>
   )
 }
