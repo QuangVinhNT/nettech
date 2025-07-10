@@ -3,12 +3,14 @@ import HomeSection from "./layout/HomeSection";
 import OurClientsSection from "./layout/OurClientsSection";
 import ReasonSection from "./layout/ReasonSection";
 import SolutionsSection from "./layout/SolutionsSection";
+import TeamSection from "./layout/TeamSection";
 import Button from "./ui/Button";
 import Container from "./ui/Container";
 import ReasonCard from "./ui/ReasonCard";
 import SectionContainer from "./ui/SectionContainer";
+import TeamCard from "./ui/TeamCard";
 
 export {
-  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection,
-  Container, Button, SectionContainer, ReasonCard
+  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection, TeamSection,
+  Container, Button, SectionContainer, ReasonCard, TeamCard
 };

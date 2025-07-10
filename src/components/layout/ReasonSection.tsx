@@ -33,7 +33,7 @@ const reasons = [
 
 const ReasonSection = () => {
   return (
-    <div className="bg-background relative z-0 pt-16">
+    <div className="bg-background relative z-0 py-16">
       <img src={ReasonSd1} alt="" className="absolute z-10" />
       <img src={ReasonSd2} alt="" className="absolute z-10 size-96 object-cover bottom-72 -right-44" />
       <Container
