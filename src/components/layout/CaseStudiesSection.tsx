@@ -11,6 +11,8 @@ import CaseStudySd2 from '@/assets/background_img/case_study_sd2.png';
 import CaseStudySd3 from '@/assets/background_img/case_study_sd3.png';
 import CaseStudySd4 from '@/assets/background_img/case_study_sd4.png';
 import CaseStudySd5 from '@/assets/background_img/reason_sd2.png';
+import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 
 const caseStudies = [
   {
@@ -31,13 +33,17 @@ const caseStudies = [
 ];
 
 const CaseStudiesSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3
+  });
   return (
-    <div className="relative z-0 overflow-hidden pt-16">
-      <img src={CaseStudySd1} alt="" className="absolute z-10 top-32 left-1/2 -translate-x-1/2 scale-150" />
-      <img src={CaseStudySd2} alt="" className="absolute z-20 w-1/2 block right-24" />
-      <img src={CaseStudySd3} alt="" className="absolute z-10 h-full block object-cover right-0 top-0" />
-      <img src={CaseStudySd4} alt="" className="absolute z-10 left-0 bottom-0" />
-      <img src={CaseStudySd5} alt="" className="absolute z-10 h-1/3 block object-cover right-0 top-3/10" />
+    <div className="relative z-20 overflow-hidden pt-16">
+      <img src={CaseStudySd1} alt="" className="absolute z-30 top-32 left-1/2 -translate-x-1/2 scale-150" />
+      <img src={CaseStudySd2} alt="" className="absolute z-40 w-1/2 block right-24" />
+      <img src={CaseStudySd3} alt="" className="absolute z-30 h-full block object-cover right-0 top-0" />
+      <img src={CaseStudySd4} alt="" className="absolute z-30 left-0 bottom-0" />
+      <img src={CaseStudySd5} alt="" className="absolute z-30 h-1/3 block object-cover right-0 top-3/10" />
       <Container
         child={
           <SectionContainer
@@ -45,21 +51,26 @@ const CaseStudiesSection = () => {
             title="Successfull Stories Through Every Project"
             description="Each project we undertake is not just a task—it’s a journey toward innovation and impact. From ideation to implementation, our team is dedicated to delivering meaningful results. Behind every project lies a story of collaboration, challenges overcome, and goals achieved. These success stories are a testament to our commitment, expertise, and passion for excellence."
             align="left"
-            className="py-16 relative z-30"
+            className="py-16 relative z-50"
             child={
-              <>
-                <div className="flex gap-8 justify-center mt-60">
+              <div ref={ref}>
+                <motion.div
+                  className="flex gap-8 justify-center mt-60"
+                  initial={window.innerWidth > 1280 ? { opacity: 0, y: 100 } : false}
+                  animate={window.innerWidth > 1280 && inView ? { opacity: 1, y: 0 } : false}
+                  transition={{ duration: 0.3 }}
+                >
                   {caseStudies.map((caseStudy, idx) => (
                     <CaseStudyCard key={idx} thumbnail={caseStudy.thumbnail} title={caseStudy.title} description={caseStudy.description} className="nth-[2]:-translate-y-16" />
                   ))}
-                </div>
+                </motion.div>
                 <Button
                   label="See all"
                   variant="secondary"
                   className="group mx-auto"
                   suffix={<ArrowUpRightIcon className="size-4 stroke-[2.5] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />}
                 />
-              </>
+              </div>
             }
           />
         }

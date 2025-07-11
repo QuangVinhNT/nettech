@@ -7,6 +7,8 @@ import ProfitCard from '@/assets/profit_card.png';
 import ReasonCard from "../ui/ReasonCard";
 import ReasonSd1 from '@/assets/background_img/reason_sd1.png';
 import ReasonSd2 from '@/assets/background_img/reason_sd2.png';
+import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
 
 const reasons = [
   {
@@ -32,8 +34,12 @@ const reasons = [
 ];
 
 const ReasonSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5
+  });
   return (
-    <div className="relative z-0 py-16">
+    <div className="relative z-0 py-16" ref={ref}>
       <img src={ReasonSd1} alt="" className="absolute z-10" />
       <img src={ReasonSd2} alt="" className="absolute z-10 size-96 object-cover bottom-72 -right-44" />
       <Container
@@ -56,7 +62,12 @@ const ReasonSection = () => {
                     suffix={<ArrowRightIcon className="size-4 stroke-[2.5] transition-all group-hover:translate-x-1" />}
                   />
                 </div>
-                <div className="mt-32 flex flex-wrap justify-center gap-8">
+                <motion.div
+                  className="mt-32 flex flex-wrap justify-center gap-8"
+                  initial={window.innerWidth > 1280 ? { opacity: 0, x: -100 } : false}
+                  animate={window.innerWidth > 1280 && inView ? { opacity: 1, x: 0 } : false}
+                  transition={{ duration: 0.3 }}
+                >
                   {reasons.map((reason, idx) => (
                     <ReasonCard
                       quantity={reason.quantity}
@@ -64,7 +75,7 @@ const ReasonSection = () => {
                       key={idx}
                     />
                   ))}
-                </div>
+                </motion.div>
               </>
             }
           />

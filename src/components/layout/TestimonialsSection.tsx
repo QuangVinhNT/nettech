@@ -5,6 +5,9 @@ import TestimonialCard from "../ui/TestimonialCard";
 import Testimonials1 from '@/assets/testimonials_1.png';
 import Testimonials2 from '@/assets/testimonials_2.jpg';
 import Testimonials3 from '@/assets/testimonials_3.png';
+import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import TestimonialSd1 from '@/assets/background_img/reason_sd1.png'
 
 const testimonials = [
   {
@@ -25,27 +28,40 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2
+  });
   return (
-    <div>
+    <div ref={ref} className="relatitve z-0">
+      <img src={TestimonialSd1} alt="" className="absolute z-10 left-1/2 -translate-x-1/2"/>
       <Container
         child={
           <SectionContainer
             label="Testimonials"
             title="Voice of our customers"
-            className="py-16 overflow-hidden rounded-2xl"
+            className="py-16 overflow-hidden rounded-2xl relative z-20"
             child={
               <>
                 <div className="mt-8 relative z-20 w-full h-[400px]">
                   {testimonials.map((testimonial, idx) => (
-                    <TestimonialCard name={testimonial.name} content={testimonial.content} thumbnail={testimonial.thumbnail} key={idx} className={`absolute nth-[1]:z-30 nth-[1]:left-0 nth-[1]:-translate-x-1/3 nth-[1]:scale-80 nth-[2]:z-40 nth-[2]:left-1/2 nth-[2]:-translate-x-1/2 nth-[3]:z-30 nth-[3]:right-0 nth-[3]:translate-x-1/3 nth-[3]:scale-80`} />
+                    <motion.div
+                      key={idx}
+                      className="absolute nth-[1]:z-30 nth-[1]:left-0 nth-[1]:-translate-x-1/3 nth-[1]:scale-80 nth-[2]:z-40 nth-[2]:left-1/2 nth-[2]:-translate-x-1/2 nth-[3]:z-30 nth-[3]:right-0 nth-[3]:translate-x-1/3 nth-[3]:scale-80"
+                      initial={window.innerWidth > 1280 ? (idx === 1 ? { opacity: 0, scale: 0 } : { opacity: 0, x: idx === 0 ? 100 : -100 }) : false}
+                      animate={window.innerWidth > 1280 && inView ? { opacity: 1, scale: 1, x: 0 } : false}
+                      transition={{ duration: 0.3, delay: idx === 1 ? 0 : 0.3 }}
+                    >
+                      <TestimonialCard name={testimonial.name} content={testimonial.content} thumbnail={testimonial.thumbnail} className={``} />
+                    </motion.div>
                   ))}
                 </div>
                 <div className="flex gap-8 mt-4 justify-center items-center">
                   <button className="group relative before:absolute before:content-[''] before:z-0 before:-left-2 before:top-1/2 before:-translate-y-1/2 before:size-6 before:rounded-full before:bg-primary cursor-pointer">
-                    <ArrowLongLeftIcon className="size-8 relative z-10 transition-all group-hover:-translate-x-1"/>
+                    <ArrowLongLeftIcon className="size-8 relative z-10 transition-all group-hover:-translate-x-1" />
                   </button>
                   <button className="group relative before:absolute before:content-[''] before:z-0 before:-right-2 before:top-1/2 before:-translate-y-1/2 before:size-6 before:rounded-full before:bg-primary cursor-pointer">
-                    <ArrowLongRightIcon className="size-8 relative z-10 transition-all group-hover:translate-x-1"/>
+                    <ArrowLongRightIcon className="size-8 relative z-10 transition-all group-hover:translate-x-1" />
                   </button>
                 </div>
               </>
