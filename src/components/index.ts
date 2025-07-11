@@ -8,6 +8,7 @@ import OurClientsSection from "./layout/OurClientsSection";
 import ReasonSection from "./layout/ReasonSection";
 import SolutionsSection from "./layout/SolutionsSection";
 import TeamSection from "./layout/TeamSection";
+import TestimonialsSection from "./layout/TestimonialsSection";
 import Button from "./ui/Button";
 import CaseStudyCard from "./ui/CaseStudyCard";
 import Container from "./ui/Container";
@@ -16,9 +17,10 @@ import ReasonCard from "./ui/ReasonCard";
 import SectionContainer from "./ui/SectionContainer";
 import Select from "./ui/select";
 import TeamCard from "./ui/TeamCard";
+import TestimonialCard from "./ui/TestimonialCard";
 import Textarea from "./ui/Textarea";
 
 export {
-  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection, TeamSection, CaseStudiesSection, AwardSection, ContactSection, Footer,
-  Container, Button, SectionContainer, ReasonCard, TeamCard, CaseStudyCard, Select, Input, Textarea
+  Header, HomeSection, OurClientsSection, SolutionsSection, ReasonSection, TeamSection, TestimonialsSection, CaseStudiesSection, AwardSection, ContactSection, Footer,
+  Container, Button, SectionContainer, ReasonCard, TeamCard, CaseStudyCard, Select, Input, Textarea, TestimonialCard
 };
