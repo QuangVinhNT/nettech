@@ -1,24 +1,25 @@
 import Logo from '@/assets/nettech_logo.png';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import {Bars3Icon, ChevronDownIcon} from '@heroicons/react/24/outline';
 import Container from "../ui/Container";
+import {XMarkIcon} from "@heroicons/react/24/outline";
+import {useState} from "react";
 
 const Header = () => {
+  const [isShowNavBar, setIsShowNavBar] = useState<boolean>(true)
   return (
     <Container child={
-      <div className="relative z-20 flex justify-between items-center py-2">
-        <img src={Logo} alt="" className="h-14" />
-        <ul className="flex text-lg font-medium gap-8">
+      <div className="relative z-30 flex justify-between items-center py-2">
+        <img src={Logo} alt="" className="h-14"/>
+        <ul
+          className={`flex flex-col xl:flex-row fixed xl:relative top-0 right-0 ${isShowNavBar ? 'translate-x-4' : 'translate-x-[110%]'} xl:translate-x-0 bg-white xl:bg-transparent text-background xl:text-white py-4 pl-20 pr-12 xl:p-0 h-dvh xl:h-auto text-lg font-medium gap-12 transition-all`}>
           <li className="flex items-center gap-1 cursor-pointer hover:text-primary transition-all">
             <span>Services</span>
-            <ChevronDownIcon className="size-4" />
           </li>
           <li className="flex items-center gap-1 cursor-pointer hover:text-primary transition-all">
             <span>Case Studies</span>
-            <ChevronDownIcon className="size-4" />
           </li>
           <li className="flex items-center gap-1 cursor-pointer hover:text-primary transition-all">
             <span>Resources</span>
-            <ChevronDownIcon className="size-4" />
           </li>
           <li className="cursor-pointer hover:text-primary transition-all">
             <span>Careers</span>
@@ -26,13 +27,27 @@ const Header = () => {
           <li className="cursor-pointer hover:text-primary transition-all">
             <span>About Us</span>
           </li>
+          <li className={'absolute left-3 top-3 block xl:hidden'}>
+            <XMarkIcon className={'size-8'} onClick={() => {
+              setIsShowNavBar(false)
+              document.body.style.overflow = ''
+            }}/>
+          </li>
         </ul>
-        <div className="flex items-center gap-2 bg-secondary/28 border-1 border-secondary px-4 py-1.5 rounded-full">
-          <span>EN</span>
-          <ChevronDownIcon className="size-4" />
+        <div className={'flex items-center gap-4'}>
+          <Bars3Icon
+            className={'size-8 xl:hidden'}
+            onClick={() => {
+              setIsShowNavBar(true)
+              document.body.style.overflow = 'hidden'
+            }}/>
+          <div className="flex items-center gap-2 bg-secondary/28 border-1 border-secondary px-4 py-1.5 rounded-full">
+            <span>EN</span>
+            <ChevronDownIcon className="size-4"/>
+          </div>
         </div>
       </div>
-    } />
+    }/>
   );
 };
 
