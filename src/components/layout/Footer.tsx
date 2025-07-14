@@ -42,8 +42,8 @@ const Footer = () => {
       child={
         <div className="pt-16">
           <div className="flex flex-col lg:flex-row gap-16">
-            <img src={Logo} alt="" className="w-full px-8 lg:px-0 lg:w-1/8 object-contain" />
-            <div className="flex-1 grid grid-cols-1 mx-auto lg:grid-cols-4 gap-16">
+            <img src={Logo} alt="" className="w-full px-8 sm:px-32 lg:px-0 lg:w-1/8 object-contain" />
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 mx-auto lg:grid-cols-4 gap-16">
               {footerItems.map((item, idx) => (
                 <div key={idx}>
                   <h3 className="text-lg font-bold mb-4">{item.nav}</h3>

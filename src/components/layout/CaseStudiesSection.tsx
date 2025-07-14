@@ -50,7 +50,7 @@ const CaseStudiesSection = () => {
             label="Case studies"
             title="Successfull Stories Through Every Project"
             description="Each project we undertake is not just a task—it’s a journey toward innovation and impact. From ideation to implementation, our team is dedicated to delivering meaningful results. Behind every project lies a story of collaboration, challenges overcome, and goals achieved. These success stories are a testament to our commitment, expertise, and passion for excellence."
-            align={`${window.innerWidth < 767 ? 'center' : 'left'}`}
+            align={`${window.innerWidth <= 1023 ? 'center' : 'left'}`}
             className="py-16 relative z-50"
             child={
               <div ref={ref}>

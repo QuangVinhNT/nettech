@@ -12,7 +12,7 @@ const HomeSection = () => {
   return (
     <Container
       child={
-        <div className="pb-64 lg:pb-32 relative z-20 mt-10 overflow-hidden" ref={ref}>
+        <div className="pb-64 sm:pb-48 lg:pb-32 relative z-20 mt-10 overflow-hidden" ref={ref}>
           <Button
             label="Contact Us"
             variant="secondary"
@@ -20,7 +20,7 @@ const HomeSection = () => {
             suffix={<ArrowUpRightIcon className="size-4 stroke-[2.5] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />}
           />
           <motion.h1
-            className="text-3xl lg:text-7xl font-bold text-center mt-8 lg:leading-22"
+            className="text-3xl sm:text-5xl lg:text-7xl font-bold text-center mt-8 lg:leading-22"
             initial={window.innerWidth > 1280 ? { opacity: 0, scale: 0 } : false}
             animate={inView && window.innerWidth > 1280 ? { opacity: 1, scale: 1 } : false}
             transition={{ duration: 0.3 }}
@@ -28,14 +28,14 @@ const HomeSection = () => {
             Ride the Next Wave of Digital Transformation
           </motion.h1>
           <motion.p
-            className="mt-4 lg:mt-8 text-base lg:text-xl text-center max-w-3xl mx-auto font-bold text-gray"
+            className="mt-4 lg:mt-8 text-base sm:text-lg lg:text-xl text-center max-w-3xl mx-auto font-bold text-gray"
             initial={window.innerWidth > 1280 ? { opacity: 0, scale: 0 } : false}
             animate={inView && window.innerWidth > 1280 ? { opacity: 1, scale: 1 } : false}
             transition={{ duration: 0.3 }}
           >
             We are dedicated to powering your business success with digital solutions and unwavering commitment, focusing on 4 compelling strengths: speed, commitment, customer centricity and crestivity
           </motion.p>
-          <div className="flex justify-between lg:justify-end items-center mt-8">
+          <div className="flex justify-between sm:justify-end items-center mt-8">
             <div className="px-6">
               <span className="block text-4xl font-bold mb-1">3000+</span>
               <span className="text-base lg:text-xl text-gray font-semibold">Certified Engineers</span>
