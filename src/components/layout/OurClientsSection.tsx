@@ -22,7 +22,7 @@ const OurClientsSection = () => {
   return (
     <div className="relative z-0" ref={ref}>
       <img src={OurClientsSD1} alt="" className="absolute z-10 h-full" />
-      <img src={OurClientsSD2} alt="" className="absolute z-10" />
+      <img src={OurClientsSD2} alt="" className="absolute z-10 h-full" />
       <img src={OurClientsSD3} alt="" className="absolute z-10 right-0 h-full" />
       <Container
         child={
@@ -31,7 +31,7 @@ const OurClientsSection = () => {
             title="Our Clients"
             child={
               <motion.div
-                className="flex justify-center items-center gap-12 mt-12"
+                className="flex flex-wrap justify-center items-center gap-12 mt-12"
                 initial={window.innerWidth > 1280 ? { opacity: 0, y: 100 } : false}
                 animate={window.innerWidth > 1280 && inView ? { opacity: 1, y: 0 } : false}
                 transition={{ duration: 0.3 }}

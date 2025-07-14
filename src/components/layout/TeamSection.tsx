@@ -41,7 +41,7 @@ const TeamSection = () => {
             className="relative py-16 z-20"
             child={
               <motion.div
-                className="flex justify-center gap-8 mt-16"
+                className="flex flex-col lg:flex-row justify-center gap-8 mt-16"
                 initial={window.innerWidth > 1280 ? { opacity: 0, x: 100 } : false}
                 animate={window.innerWidth > 1280 && inView ? { opacity: 1, x: 0 } : false}
                 transition={{ duration: 0.3 }}

@@ -32,12 +32,12 @@ const AwardSection = () => {
       <Container 
         child={
           <div className="relative z-40">
-            <ul className={`flex items-center gap-4 text-xl font-bold`}>
+            <ul className={`flex items-center gap-3 text-base lg:text-xl font-bold`}>
               {tabs.map((tab, idx) => (
-                <li key={idx} className={`${selectedTab === tab.label && 'bg-gradient-to-r from-[#00BBE4] to-[#9AFFFF]'} px-8 py-2.5 rounded-full cursor-pointer`} onClick={() => setSelectedTab(tab.label)}>{tab.label}</li>
+                <li key={idx} className={`${selectedTab === tab.label && 'bg-gradient-to-r from-[#00BBE4] to-[#9AFFFF]'} px-4 lg:px-8 py-1.5 lg:py-2.5 rounded-full cursor-pointer`} onClick={() => setSelectedTab(tab.label)}>{tab.label}</li>
               ))}
             </ul>
-            <div className="flex  bg-white/30 mt-8 rounded-2xl h-[300px] backdrop-blur-xl">
+            <div className="flex flex-col lg:flex-row bg-white/30 mt-8 rounded-2xl h-fit lg:h-[300px] backdrop-blur-xl">
               {tabs.filter((tab) => tab.label === selectedTab)[0].values.map((tabValue, idx) => (
                 <div key={idx} className="py-12 rounded-2xl cursor-pointer hover:bg-gradient-to-tr from-[#299FE5] via-[#9AFFFF] to-[#00BBE4] transition-all">
                   <img src={tabValue} alt="" className="w-full h-full object-contain scale-120"/>

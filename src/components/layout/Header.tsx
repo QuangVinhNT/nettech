@@ -5,13 +5,13 @@ import {XMarkIcon} from "@heroicons/react/24/outline";
 import {useState} from "react";
 
 const Header = () => {
-  const [isShowNavBar, setIsShowNavBar] = useState<boolean>(true)
+  const [isShowNavBar, setIsShowNavBar] = useState<boolean>(false)
   return (
     <Container child={
       <div className="relative z-30 flex justify-between items-center py-2">
         <img src={Logo} alt="" className="h-14"/>
         <ul
-          className={`flex flex-col xl:flex-row fixed xl:relative top-0 right-0 ${isShowNavBar ? 'translate-x-4' : 'translate-x-[110%]'} xl:translate-x-0 bg-white xl:bg-transparent text-background xl:text-white py-4 pl-20 pr-12 xl:p-0 h-dvh xl:h-auto text-lg font-medium gap-12 transition-all`}>
+          className={`flex flex-col lg:flex-row fixed lg:relative top-0 right-0 ${isShowNavBar ? 'translate-x-4' : 'translate-x-[110%]'} lg:translate-x-0 bg-white lg:bg-transparent text-background lg:text-white py-4 pl-20 pr-12 lg:p-0 h-dvh lg:h-auto text-lg font-medium gap-12 transition-all`}>
           <li className="flex items-center gap-1 cursor-pointer hover:text-primary transition-all">
             <span>Services</span>
           </li>
@@ -27,7 +27,7 @@ const Header = () => {
           <li className="cursor-pointer hover:text-primary transition-all">
             <span>About Us</span>
           </li>
-          <li className={'absolute left-3 top-3 block xl:hidden'}>
+          <li className={'absolute left-3 top-3 block lg:hidden'}>
             <XMarkIcon className={'size-8'} onClick={() => {
               setIsShowNavBar(false)
               document.body.style.overflow = ''
@@ -36,7 +36,7 @@ const Header = () => {
         </ul>
         <div className={'flex items-center gap-4'}>
           <Bars3Icon
-            className={'size-8 xl:hidden'}
+            className={'size-8 lg:hidden'}
             onClick={() => {
               setIsShowNavBar(true)
               document.body.style.overflow = 'hidden'

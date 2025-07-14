@@ -10,9 +10,9 @@ const TestimonialCard = (props: Props) => {
   const {thumbnail, name, content, className} = props
   return (
     <div className={`z-0 w-[800px] aspect-[2/1] overflow-hidden rounded-2xl ${className}`}>
-      <div className="absolute z-20 w-[45%] top-0 left-0 h-full bg-[#141C65] p-8">
-        <h2 className="text-2xl font-bold mb-4">{name}</h2>
-        <p className="font-light">{content}</p>
+      <div className="absolute z-20 w-0 lg:w-[45%] top-0 left-0 h-full bg-[#141C65] p-8 rounded-l-2xl">
+        <h2 className="text-2xl font-bold mb-4 hidden lg:block">{name}</h2>
+        <p className="font-light hidden lg:block">{content}</p>
       </div>
       <img src={thumbnail} alt="" className="w-full"/>
       <div className="absolute z-10 bg-[#141C65]/50 top-0 left-0 w-full h-full"></div>

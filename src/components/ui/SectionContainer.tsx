@@ -20,7 +20,7 @@ const SectionContainer = (props: Props) => {
         )}
         <h1 className={`text-4xl font-bold ${(align && align === 'left') ? 'text-left' : 'text-center'}`}>{title}</h1>
         {description && (
-          <p className={`${(align && align === 'left') ? 'text-left text-gray' : 'text-center leading-10'} mt-8 text-xl shadow-lg`}>{description}</p>
+          <p className={`${(align && align === 'left') ? 'text-left text-gray' : 'text-center leading-10'} mt-8 text-xl`}>{description}</p>
         )}
       </div>
       {child}

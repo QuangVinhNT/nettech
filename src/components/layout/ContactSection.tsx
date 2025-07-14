@@ -66,19 +66,19 @@ const ContactSection = () => {
             className="py-16 relative z-20"
             child={
               <div className="flex gap-16 mt-16">
-                <img src={ContactSd2} alt="" className="w-1/3 object-contain" />
+                <img src={ContactSd2} alt="" className="w-1/3 object-contain hidden lg:block" />
                 <form action="" className="bg-white/10 flex-1 h-fit rounded-3xl p-8 flex flex-col gap-4">
                   <Select placeholder="Purpose*" options={purposes} />
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <Input placeholder="First name*" />
                     <Input placeholder="Last name*" />
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <Input placeholder="Email*" />
                     <Input placeholder="Phone number*" />
                   </div>
                   <Input placeholder="Company name*" />
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <Input placeholder="Job title*" />
                     <Select placeholder="Industry*" options={industries} />
                   </div>
@@ -89,7 +89,7 @@ const ContactSection = () => {
                   <Button
                     label="Next"
                     variant="primary"
-                    className="group w-fit mt-4 text-base! py-2! px-12!"
+                    className="group w-full flex justify-center lg:w-fit mt-4 text-base! py-2! px-12!"
                     suffix={<ArrowRightIcon className="size-3.5 stroke-[2.5] transition-all group-hover:translate-x-1" />}
                   />
                 </form>

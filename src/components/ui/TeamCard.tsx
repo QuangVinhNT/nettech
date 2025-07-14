@@ -10,7 +10,7 @@ type Props = {
 const TeamCard = (props: Props) => {
   const { image, role, status } = props;
   return (
-    <div className="bg-white/10 w-[400px] p-10 relative overflow-hidden">
+    <div className="bg-white/10 lg:w-[400px] p-10 relative overflow-hidden">
       <img src={image} alt="img" className="h-[420px] object-cover block mx-auto relative z-30" />
       <span className="block text-center mt-8 text-xl font-bold">{role}</span>
       <span className="block text-center mt-2 text-xl">{status}</span>

@@ -41,9 +41,9 @@ const Footer = () => {
     <Container
       child={
         <div className="pt-16">
-          <div className="flex gap-16">
-            <img src={Logo} alt="" className="w-1/8 object-contain" />
-            <div className="flex-1 grid grid-cols-4 gap-16">
+          <div className="flex flex-col lg:flex-row gap-16">
+            <img src={Logo} alt="" className="w-full px-8 lg:px-0 lg:w-1/8 object-contain" />
+            <div className="flex-1 grid grid-cols-1 mx-auto lg:grid-cols-4 gap-16">
               {footerItems.map((item, idx) => (
                 <div key={idx}>
                   <h3 className="text-lg font-bold mb-4">{item.nav}</h3>
@@ -56,7 +56,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center pt-16 pb-8">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center pt-16 pb-8">
             <span className="text-sm text-gray">Copyright ©2025 Nguyen Tho Quang Vinh. Designed by Ngo Thu. All Rights Reserved.</span>
             <ul className="flex items-center">
               <li className="px-6 border-r border-white">
